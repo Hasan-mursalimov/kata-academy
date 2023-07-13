@@ -34,34 +34,78 @@ public class RomanNumerals {
     }
 
     public String arithmeticRomanNumber(int num) {
-        if (num == 1) {
-            return "I";
-        } else if (num == 2) {
-            return "II";
-        } else if (num == 3) {
-            return "III";
-        } else if (num == 4) {
-            return "IV";
-        } else if (num == 5) {
-            return "V";
-        } else if (num == 6) {
-            return "VI";
-        } else if (num == 7) {
-            return "VII";
-        } else if (num == 8) {
-            return "VIII";
-        } else if (num == 9) {
-            return "IX";
-        } else if (num == 10) {
-            return "X";
-        } else if (num > 10) {
-            return "X...";
-        } else {
-            try {
-                throw new Exception();
-            } catch (Exception e) {
-                throw new RuntimeException(e.toString() + "т.к. в римской системе нет отрицательных чисел и нуля");
+        String[] romansNumbers = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
+        int[] arabNumber = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int element = 0;
+        if (num <= 10) {
+            return romansNumbers[findIndex(arabNumber, num)];
+        }
+        if (num > 10 && num <= 20) {
+            element = returnOfTheRemainder(num);
+            return "X" + romansNumbers[element];
+        }
+        if (num > 20 && num <= 30) {
+            element = returnOfTheRemainder(num);
+            return "XX" + romansNumbers[element];
+        }
+        if (num > 30 && num < 40) {
+            element = returnOfTheRemainder(num);
+            return "XXX" + romansNumbers[element];
+        }
+        if (num == 40) {
+            return "XXL";
+        } else if (num > 40 && num < 50) {
+            element = returnOfTheRemainder(num);
+            return "XL" + romansNumbers[element];
+        }
+        if (num == 50) {
+            return "L";
+        } else if (num > 50 && num < 60) {
+            element = returnOfTheRemainder(num);
+            return "L" + romansNumbers[element];
+        }
+        if (num == 60) {
+            return "LX";
+        } else if (num > 60 && num < 70) {
+            element = returnOfTheRemainder(num);
+            return "LX" + romansNumbers[element];
+        }
+        if (num == 70) {
+            return "LXX";
+        } else if (num > 70 && num < 80) {
+            element = returnOfTheRemainder(num);
+            return "LXX" + romansNumbers[element];
+        }
+        if (num == 80) {
+            return "LXXX";
+        } else if (num > 80 && num < 90) {
+            element = returnOfTheRemainder(num);
+            return "LXXX" + romansNumbers[element];
+        }
+        if (num == 90) {
+            return "XC";
+        } else if (num > 90 && num < 100) {
+            element = returnOfTheRemainder(num);
+            return "XC" + romansNumbers[element];
+        }
+        if (num==100) {
+            return "C";
+        }
+        return "Не найдено чисел";
+    }
+
+    public int findIndex(int[] arr, int element) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == element) {
+                return i;
             }
         }
+        return -1;
     }
+
+    public int returnOfTheRemainder(int num) {
+        return num % 10;
+    }
+
+
 }
