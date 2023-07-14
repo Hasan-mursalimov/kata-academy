@@ -1,7 +1,7 @@
 package KataAcademy;
 
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class InputValidation {
 
@@ -68,9 +68,7 @@ public class InputValidation {
 
         arabNumber = new String[10];
 
-        for (int i = 0; i < arabNumber.length; i++) {
-            arabNumber[i] = new String();
-        }
+        Arrays.fill(arabNumber, new String());
         arabNumber[0] = "1";
         arabNumber[1] = "2";
         arabNumber[2] = "3";
@@ -114,9 +112,7 @@ public class InputValidation {
         mathematicalExpressions = new String[4];
         int count = 0;
         arrUserInput = userInput.split(" ");
-        for (int i = 0; i < mathematicalExpressions.length; i++) {
-            mathematicalExpressions[i] = new String();
-        }
+        Arrays.fill(mathematicalExpressions, new String());
         mathematicalExpressions[0] = "+";
         mathematicalExpressions[1] = "-";
         mathematicalExpressions[2] = "*";
