@@ -1,5 +1,8 @@
 package KataAcademy;
 
+/**
+ * класс с методами для математическими выражениями с арабскими числами
+ */
 public class ArabArithmetic {
 
 

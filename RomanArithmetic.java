@@ -1,5 +1,9 @@
 package KataAcademy;
 
+/**
+ * класс  с методами для математическими выражениями с римскими числами
+ */
+
 public class RomanArithmetic {
 
     private RomanNumerals romanNumerals = new RomanNumerals();

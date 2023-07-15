@@ -2,6 +2,7 @@ package KataAcademy;
 
 
 import java.util.Arrays;
+/**  класс проверяет на вволидность вводимых данных*/
 
 public class InputValidation {
 

@@ -1,5 +1,9 @@
 package KataAcademy;
 
+/**
+ * Класс для переобразования String в int и обратно
+ */
+
 public class RomanNumerals {
 
     public int romanNumber(String number) {
@@ -34,8 +38,10 @@ public class RomanNumerals {
     }
 
     public String arithmeticRomanNumber(int num) {
+
         String[] romansNumbers = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
         int[] arabNumber = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
         int element = 0;
         if (num <= 10) {
             return romansNumbers[findIndex(arabNumber, num)];
