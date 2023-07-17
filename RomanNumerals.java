@@ -110,7 +110,7 @@ public class RomanNumerals {
     }
 
     public int returnOfTheRemainder(int num) {
-        return num % 10;
+        return num % 10 - 1;
     }
 
 
