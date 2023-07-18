@@ -50,11 +50,13 @@ public class RomanNumerals {
             element = returnOfTheRemainder(num);
             return "X" + romansNumbers[element];
         }
-        if (num > 20 && num <= 30) {
+        if (num > 20 && num < 30) {
             element = returnOfTheRemainder(num);
             return "XX" + romansNumbers[element];
         }
-        if (num > 30 && num < 40) {
+        if (num == 30){
+            return "XXX";
+        } else if (num > 30 && num < 40) {
             element = returnOfTheRemainder(num);
             return "XXX" + romansNumbers[element];
         }
