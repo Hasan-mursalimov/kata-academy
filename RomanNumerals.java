@@ -46,11 +46,13 @@ public class RomanNumerals {
         if (num <= 10) {
             return romansNumbers[findIndex(arabNumber, num)];
         }
-        if (num > 10 && num <= 20) {
+        if (num > 10 && num < 20) {
             element = returnOfTheRemainder(num);
             return "X" + romansNumbers[element];
         }
-        if (num > 20 && num < 30) {
+        if (num == 20){
+            return "XX";
+        } else if (num > 20 && num < 30) {
             element = returnOfTheRemainder(num);
             return "XX" + romansNumbers[element];
         }
